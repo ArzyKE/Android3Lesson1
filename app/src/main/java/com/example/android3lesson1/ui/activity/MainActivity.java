@@ -17,8 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private MainViewModel viewModel;
-
-    ListAdapter listAdapter = new ListAdapter();
+    private ListAdapter listAdapter = new ListAdapter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initialization() {
         viewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        binding.list.setAdapter(listAdapter);
+        binding.recycler.setAdapter(listAdapter);
     }
 
     private void addObserver() {

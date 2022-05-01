@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
-    List<NameModel> list = new ArrayList<>();
+   public List<NameModel> list = new ArrayList<>();
 
     public void setData(List<NameModel> nameModels) {
         list = nameModels;
