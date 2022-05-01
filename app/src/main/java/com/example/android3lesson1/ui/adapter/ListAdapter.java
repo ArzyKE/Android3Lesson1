@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
-   public List<NameModel> list = new ArrayList<>();
+    private List<NameModel> list = new ArrayList<>();
 
     public void setData(List<NameModel> nameModels) {
         list = nameModels;
@@ -46,6 +46,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             super(binding.getRoot());
             this.binding = binding;
         }
+
         public void onBind(NameModel nameModel) {
             binding.tvName.setText(nameModel.getName());
         }
